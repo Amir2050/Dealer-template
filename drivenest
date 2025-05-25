@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DriveNest Dealer Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">DriveNest Dealer Dashboard</h1>
+    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Logout</button>
+  </header>
+
+  <main class="p-6">
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+      <!-- Analytics Widgets -->
+      <div class="bg-white p-4 rounded-xl shadow">
+        <h2 class="text-lg font-semibold">Total Listings</h2>
+        <p class="text-3xl font-bold mt-2">24</p>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow">
+        <h2 class="text-lg font-semibold">Pending Requests</h2>
+        <p class="text-3xl font-bold mt-2">3</p>
+      </div>
+      <div class="bg-white p-4 rounded-xl shadow">
+        <h2 class="text-lg font-semibold">Services This Week</h2>
+        <p class="text-3xl font-bold mt-2">12</p>
+      </div>
+    </section>
+
+    <!-- Car Listings -->
+    <section class="bg-white p-4 rounded-xl shadow">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">My Car Listings</h2>
+        <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">+ Add New Car</button>
+      </div>
+      <table class="w-full text-left table-auto">
+        <thead class="text-sm text-gray-600 uppercase border-b">
+          <tr>
+            <th class="p-2">Photo</th>
+            <th class="p-2">Make</th>
+            <th class="p-2">Model</th>
+            <th class="p-2">Year</th>
+            <th class="p-2">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-gray-50">
+            <td class="p-2"><img src="https://via.placeholder.com/80" class="rounded-md" alt="Car"/></td>
+            <td class="p-2">Toyota</td>
+            <td class="p-2">Camry</td>
+            <td class="p-2">2022</td>
+            <td class="p-2"><span class="bg-green-100 text-green-700 px-2 py-1 rounded text-sm">Active</span></td>
+          </tr>
+          <!-- Repeat rows as needed -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
