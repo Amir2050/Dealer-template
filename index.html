@@ -2,141 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Futuristic Dealer Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DriveNest - Buyer Home</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap');
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      margin: 0;
-      background: #0a0f1a;
-      color: #cfd8dc;
-      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+      color: #fff;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      padding: 2rem;
     }
 
     header {
-      background: linear-gradient(90deg, #00f0ff, #0047ff);
-      padding: 20px 40px;
-      box-shadow: 0 0 15px #00f0ff;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 2px;
-      color: #e0f7fa;
-      text-align: center;
-      text-transform: uppercase;
-      user-select: none;
-    }
-
-    main {
-      flex-grow: 1;
-      padding: 30px 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: #15202b;
-      border-radius: 15px;
-      box-shadow: 0 0 12px #00f0ff80;
-      padding: 20px;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 25px #00f0ffcc;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .card h2 {
-      margin-top: 0;
-      font-family: 'Orbitron', sans-serif;
-      color: #00e5ff;
-      font-weight: 600;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-      text-shadow: 0 0 6px #00e5ffaa;
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00fff7;
+      letter-spacing: 2px;
     }
 
-    .card p {
+    nav a {
+      color: #ccc;
+      margin-left: 2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ff88;
+    }
+
+    .hero {
+      text-align: center;
+      margin: 4rem 0;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #00fff7, #8a2be2, #00ff88);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 30px;
       font-size: 1rem;
-      line-height: 1.4;
-      color: #b0bec5;
-      flex-grow: 1;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      background: linear-gradient(135deg, #00fff7, #8a2be2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px #00fff7, 0 0 20px #8a2be2;
     }
 
-    .stats {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      color: #80deea;
-      font-weight: 600;
-      text-shadow: 0 0 5px #80deea88;
-      user-select: none;
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00fff7, 0 0 40px #8a2be2;
     }
 
     footer {
-      padding: 15px 20px;
+      margin-top: auto;
       text-align: center;
-      color: #607d8b;
       font-size: 0.9rem;
-      border-top: 1px solid #18222f;
-      user-select: none;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        font-size: 1.5rem;
-        padding: 15px 20px;
-      }
-      main {
-        padding: 20px;
-        gap: 18px;
-      }
+      padding: 2rem 0 1rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
-    Dealer Dashboard 2077
+    <div class="logo">🚗 DriveNest</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Browse Cars</a>
+      <a href="#">Parts</a>
+      <a href="#">Service</a>
+      <a href="#">Profile</a>
+    </nav>
   </header>
 
-  <main>
-    <div class="card" tabindex="0" role="button" aria-label="Inventory Overview">
-      <h2>Inventory Overview</h2>
-      <p>Track the current inventory levels and latest stock updates. Stay ahead with real-time insights.</p>
-      <div class="stats">Total Cars: 234 | New Arrivals: 12</div>
-    </div>
-
-    <div class="card" tabindex="0" role="button" aria-label="Sales Analytics">
-      <h2>Sales Analytics</h2>
-      <p>Analyze your sales trends with futuristic charts and predictive insights to boost your business.</p>
-      <div class="stats">This Month: $125,000 | Growth: +15%</div>
-    </div>
-
-    <div class="card" tabindex="0" role="button" aria-label="Dealer Network">
-      <h2>Dealer Network</h2>
-      <p>Connect with trusted dealers and monitor partnerships across the city and beyond.</p>
-      <div class="stats">Active Dealers: 18 | New Partners: 3</div>
-    </div>
-
-    <div class="card" tabindex="0" role="button" aria-label="Service Requests">
-      <h2>Service Requests</h2>
-      <p>Manage and prioritize customer service requests with a smart queue and automated updates.</p>
-      <div class="stats">Pending: 7 | Completed: 58</div>
-    </div>
-  </main>
-
-  <footer>
-    &copy; 2025 Dealer Dashboard. Powered by futuristic vibes &amp; cool code.
-  </footer>
-</body>
-</html>
+  <section class="hero">
+    <h1>Wel
