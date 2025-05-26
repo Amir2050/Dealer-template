@@ -3,61 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DriveNest - Buyer Home</title>
+  <title>DriveNest – Smart Buyer Dashboard</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
     body {
-      background: radial-gradient(circle at center, #121212, #000000);
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
       color: white;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      padding: 2rem;
+      min-height: 100vh;
     }
 
     header {
+      padding: 20px;
+      background: #121212;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 1rem;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid #222;
     }
 
     .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #39FF14;
-      text-shadow: 0 0 10px #39FF14;
+      font-size: 1.8rem;
+      color: #39ff14;
+      text-shadow: 0 0 8px #39ff14;
+      letter-spacing: 2px;
     }
 
     nav a {
-      color: #bbb;
-      margin-left: 2rem;
+      margin-left: 25px;
       text-decoration: none;
-      font-weight: 500;
+      color: #aaa;
       transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #ffea00;
+      color: #fff;
     }
 
     .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      margin: 5rem 0 2rem;
+      padding: 3rem 1rem;
     }
 
     .hero h1 {
-      font-size: 3.2rem;
+      font-size: 3rem;
       color: #ff0000;
-      text-shadow: 0 0 20px #ff0000;
-      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #ff0000;
     }
 
     .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 1rem 2.5rem;
+      border-radius: 40px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px white;
+    }
+
+    .btn-red {
+      background: #ff1e1e;
+      box-shadow: 0 0 20px #ff1e1e;
+    }
+
+    .btn-yellow {
+      background: #ffc400;
+      box-shadow: 0 0 20px #ffc400;
+      color: black;
+    }
+
+    .btn-green {
+      background: #00e676;
+      box-shadow: 0 0 20px #00e676;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+      font-size: 0.9rem;
+      color: #666;
